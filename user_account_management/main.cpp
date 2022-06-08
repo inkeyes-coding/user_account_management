@@ -14,7 +14,13 @@ int main()
 			<< "2. Create a new account" << std::endl
 			<< "0. Exit the program" << std::endl << std::endl;
 
-		std::cin >> menuSelect;
+		// loop to receive input from the user and validate it
+		while (!(std::cin >> menuSelect)) {
+			std::cin.clear(); //clear bad input flag
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
+			std::cout << "Invalid input; please re-enter.\n";
+		}
+		system("cls");
 
 		switch (menuSelect)
 		{
@@ -28,9 +34,12 @@ int main()
 				std::cout << "Exit code here" << std::endl;
 				break;
 			default:
-				std::cout << "Invalid option selected. Please try again." << std::endl;
+				std::cout << "Invalid menu option selected. Please try again." << std::endl;
 				break;
 		}
+		std::cin.ignore();
+		std::cin.get();
+		system("cls");
 	}
 
 	/*newaccount.setName();
