@@ -41,13 +41,4 @@ int main()
 		std::cin.get();
 		system("cls");
 	}
-
-	/*newaccount.setName();
-	newaccount.setPass();
-	std::cout << std::endl;
-	newaccount.printName();
-	newaccount.printPass();*/
-
-	/*std::cin.ignore();
-	std::cin.get();*/
 }
