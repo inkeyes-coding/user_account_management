@@ -2,7 +2,6 @@
 
 int main()
 {
-	Account newaccount;
 	int menuSelect = 9;
 
 	while (menuSelect != 0)
@@ -22,20 +21,27 @@ int main()
 		}
 		system("cls");
 
+
 		switch (menuSelect)
 		{
-			case 1:
+			case 1: {
 				std::cout << "Login code here" << std::endl;
 				break;
-			case 2:
-				std::cout << "Account creation code here" << std::endl;
+			}
+			case 2: {
+				//std::cout << "Account creation code here" << std::endl;
+				Account newAcc;
+				newAcc.createAcc();
 				break;
-			case 0:
+			}
+			case 0: {
 				std::cout << "Exit code here" << std::endl;
 				break;
-			default:
+			}
+			default: {
 				std::cout << "Invalid menu option selected. Please try again." << std::endl;
 				break;
+			}
 		}
 		std::cin.ignore();
 		std::cin.get();

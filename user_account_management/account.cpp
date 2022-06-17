@@ -21,3 +21,9 @@ void Account::printPass()
 {
 	std::cout << password << std::endl;
 }
+
+void Account::createAcc()
+{
+	//std::cout << "This creates an account";
+
+}

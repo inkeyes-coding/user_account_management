@@ -10,6 +10,8 @@ public:
     void printName();
     void printPass();
 
+    void createAcc();
+
 private:
     std::string userName;
     std::string password;
