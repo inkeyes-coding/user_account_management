@@ -43,7 +43,7 @@ int main()
 				break;
 			}
 		}
-		std::cin.ignore();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cin.get();
 		system("cls");
 	}

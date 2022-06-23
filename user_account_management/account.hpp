@@ -5,12 +5,14 @@
 class Account
 {
 public:
+    std::string validateInput();
     void setName();
     void setPass();
     void printName();
     void printPass();
 
     void createAcc();
+
 
 private:
     std::string userName;
