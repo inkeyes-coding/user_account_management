@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="account.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="watcher.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="account.hpp" />
+    <ClInclude Include="watcher.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
