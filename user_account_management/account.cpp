@@ -1,22 +1,15 @@
 #include "account.hpp"
-
-std::string Account::validateInput() {
-	std::string userIn = "";
-	while (!(std::cin >> userIn)) {
-		std::cin.clear(); //clear bad input flag
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
-		std::cout << "Invalid input; please re-enter.\n";
-	}
-	return userIn;
-}
+#include "watcher.hpp"
 
 void Account::createAcc()
 {
+	Watcher watching;
+
 	std::cout << "Please enter a username: \n\n";
-	userName = validateInput();
+	userName = watching.validateInput();
 	system("cls");
 	std::cout << "Please enter a Password: \n\n";
-	password = validateInput();
+	password = watching.validateInput();
 
 	std::ofstream dbFile;
 	dbFile.open("db.dat", std::ios::out | std::ios::app);

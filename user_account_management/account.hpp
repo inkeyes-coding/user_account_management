@@ -6,7 +6,6 @@
 class Account
 {
 public:
-    std::string validateInput();
     void createAcc();
     void printName();
     void printPass();
