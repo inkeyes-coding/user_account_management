@@ -147,6 +147,9 @@
     <ClInclude Include="account.hpp" />
     <ClInclude Include="watcher.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="scratchPad.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,0 +1,19 @@
+Read a full line, then parse it element by element. To read the line:
+
+    std::string line;
+    std::getline(cin, line);
+
+To parse it, create a std::istringstream and read from that:
+
+    std::istringstream in(line);
+    int val;
+    while (in >> val) {
+        // whatever
+    }
+
+And when the loop exits, check why it exited:
+
+    if (in.eof())
+        // got through the full line, hit end of file
+    else
+        // stopped short, because something was wrong with the input
