@@ -1,4 +1,5 @@
 #include "account.hpp"
+#include "watcher.hpp"
 
 int main()
 {
@@ -13,12 +14,9 @@ int main()
 			<< "2. Create a new account" << std::endl
 			<< "0. Exit the program" << std::endl << std::endl;
 
-		// loop to receive input from the user and validate it
-		while (!(std::cin >> menuSelect)) {
-			std::cin.clear(); //clear bad input flag
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
-			std::cout << "Invalid input; please re-enter.\n";
-		}
+		Watcher mainWatcher;
+		menuSelect = stoi(mainWatcher.validateInput());
+		
 		system("cls");
 
 
@@ -29,7 +27,6 @@ int main()
 				break;
 			}
 			case 2: {
-				//std::cout << "Account creation code here" << std::endl;
 				Account newAcc;
 				newAcc.createAcc();
 				break;

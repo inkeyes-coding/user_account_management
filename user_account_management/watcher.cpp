@@ -10,3 +10,16 @@ std::string Watcher::validateInput()
 	}
 	return userIn;
 }
+
+std::string Watcher::validateInt()
+{
+	std::string userIn = "";
+	std::getline(std::cin, userIn);
+
+	for (int i = 0; i < userIn.length(); i++) {
+		if (isdigit(userIn[i]) == false) {
+			
+		}
+	}
+	return userIn;
+}

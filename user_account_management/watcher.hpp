@@ -7,6 +7,7 @@ class Watcher
 {
 public:
     std::string validateInput();
+    std::string validateInt();
 
 private:
 
