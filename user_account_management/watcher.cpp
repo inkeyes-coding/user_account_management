@@ -2,24 +2,30 @@
 
 std::string Watcher::validateInput()
 {
-	std::string userIn = "";
-	while (!(std::cin >> userIn)) {
+	std::string stringIn = "";
+	while (!(std::cin >> stringIn)) {
 		std::cin.clear(); //clear bad input flag
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //discard input buffer
 		std::cout << "Invalid input; please re-enter.\n";
 	}
-	return userIn;
+	return stringIn;
 }
 
-std::string Watcher::validateInt()
-{
-	std::string userIn = "";
-	std::getline(std::cin, userIn);
-
-	for (int i = 0; i < userIn.length(); i++) {
-		if (isdigit(userIn[i]) == false) {
-			
-		}
-	}
-	return userIn;
-}
+//std::string Watcher::validateInt()
+//{
+//	std::string intIn = "";
+//	bool isNum = false;
+//	Watcher watchingInt;
+//	
+//	while (isNum == false) {
+//		intIn = watchingInt.validateInput();
+//
+//		for (int i = 0; i < intIn.length(); i++) {
+//			if (isdigit(intIn[i]) == false) {
+//
+//			}
+//
+//		}
+//	}
+//	return intIn;
+//}

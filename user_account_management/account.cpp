@@ -3,13 +3,13 @@
 
 void Account::createAcc()
 {
-	Watcher watching;
+	Watcher watchingAcc;
 
 	std::cout << "Please enter a username: \n\n";
-	userName = watching.validateInput();
+	userName = watchingAcc.validateInput();
 	system("cls");
 	std::cout << "Please enter a Password: \n\n";
-	password = watching.validateInput();
+	password = watchingAcc.validateInput();
 
 	std::ofstream dbFile;
 	dbFile.open("db.dat", std::ios::out | std::ios::app);
